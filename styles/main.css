@@ -1,0 +1,344 @@
+/*
+    This file contains CSS used by the entire website.
+    This is a good place to define colors you'll be using in other CSS files.
+*/
+
+:root {
+    --whiteish: #FEFEF8;
+    --off-white: #FCFCF2;
+    --grey: #D3D3D3;
+    --soft-black: #23232B;
+    --shadow-black: rgba(0,0,0,.25);
+    --highlighter-yellow: #FBF36D;
+    --yellow-gradient-half: linear-gradient(to bottom, transparent 0%, transparent 60%, var(--highlighter-yellow) 60%, var(--highlighter-yellow) 100%);
+    --yellow-gradient-full: linear-gradient(to bottom, transparent 0%, transparent 0%,  var(--highlighter-yellow) 0%,  var(--highlighter-yellow) 100%);
+}
+
+body { 
+    max-width: 60rem; 
+    margin: 0 auto !important;
+    float: none !important;
+
+    background-color: var(--off-white);
+
+    font-size: 1.3rem;
+    font-family: freight-sans-pro, Helvetica, sans-serif;
+    font-weight: 500;
+    line-height: 1.8rem;
+    text-align: left;
+    color: var(--soft-black);
+}
+
+portfolio-section {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-family: freight-display-pro, serif;
+    font-weight: 700;
+    text-align: center;
+    line-height: 3.0rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-family: freight-sans-pro, sans-serif;
+    font-weight: 300;
+    text-align: center;
+    line-height: 2rem;
+}
+
+h3 {
+    font-size: 2.25rem;
+    font-family: freight-display-pro, serif;
+    font-weight: 700;
+    text-align: center;
+    line-height: 2rem;
+}
+
+h4 {
+    font-size: 1.9rem;
+    font-family: freight-display-pro, serif;
+    font-weight: 700;
+    text-align: center;
+    line-height: 2rem;
+}
+
+h5 {
+    font-size: 1.65rem;
+    font-family: freight-text-pro, sans-serif;
+    font-weight: 700;
+    text-align: left;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+
+h6 {
+    font-size: 1.45rem;
+    font-family: freight-text-pro, sans-serif;
+    font-weight: 700;
+    text-align: left;
+    line-height: 2rem;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+}
+
+p, li {
+    font-size: 1.3rem;
+    font-family: freight-sans-pro, Helvetica, sans-serif;
+    font-weight: 500;
+    text-align: left;
+    line-height: 1.8rem;
+}
+
+flavor-text {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: var(--soft-black);
+    text-decoration-thickness: 1.75px;
+}
+
+hr {
+    border-color: var(--soft-black);
+}
+
+.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-button {
+    font-size: 1.5rem;
+    font-family: freight-sans-pro;
+    font-weight: 500;
+
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    background: var(--yellow-gradient-half);
+}
+
+.nav-button:hover {
+    cursor: pointer;
+    background: var(--yellow-gradient-full);
+}
+
+.nav-button.selected {
+    cursor: default;
+    background: var(--yellow-gradient-full);
+}
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+portfolio-section {
+    display: none;
+}
+
+portfolio-section.selected {
+    display: block;
+}
+
+
+/* Home Section */
+
+#baz-portrait img {
+    width: 40%;
+    float: right;
+    border-radius: 50%;
+
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+}
+
+#baz-signature {
+    width: 15%;
+}
+
+@media (max-width: 600px) {
+    #baz-portrait {
+        text-align: center;
+    }
+
+    #baz-portrait img {
+        float: none;
+        width: 70%;
+        
+        margin-top: 1rem;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    #baz-signature {
+        width: 40%;
+    }
+}
+
+
+/* Experience Section */
+
+.experience-text {
+    display: none;
+}
+
+.experience-group-text {
+    display: none;
+    clear: both;
+}
+
+side-image {
+    float: right;
+    clear: right;
+    width: 20rem;
+
+    text-align: center;
+    
+    margin-left: 2rem;
+    margin-right: 0rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+side-image img, side-image video {
+    max-width: 20rem;
+}
+
+side-image.screenshot img {
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px -10px var(--shadow-black);
+    margin-bottom: 0.7rem;
+}
+
+@media (max-width: 800px) {
+    side-image {
+        text-align: center;
+    }
+
+    side-image img {
+        float: none;
+        width: 70%;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        margin-top: 0rem;
+        margin-bottom: 1rem;
+    }
+}
+
+image-caption {
+    font-style: italic;
+    font-size: 1.1rem;
+    font-family: freight-sans-pro, Helvetica, sans-serif;
+    font-weight: 500;
+    line-height: 1.8rem;
+}
+
+#nuba img {
+    width: 19rem;
+    border-radius: 50%;
+}
+
+#computer-science img, #teaching-assistant img {
+    max-width: 300px;
+}
+
+#el-camino img {
+    max-width: 230px;
+}
+
+#private-tutor img {
+    max-width: 200px;
+}
+
+#ciena-wsm img {
+    max-width: 250px;
+}
+
+#interset img {
+    max-width: 300px;
+}
+
+#ciena-blue-planet img {
+    max-width: 270px;
+}
+
+#road-trip img {
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+#camp-winston img {
+    max-width: 150px;
+}
+
+#kinaxis img {
+    max-width: 300px;
+}
+
+
+/* Skills Section */
+
+#skills-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    border-color: var(--highlighter-yellow);
+    border-radius: 10px;
+    border-top-style: solid;
+    border-top-width: 5px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    flex-basis: auto;
+
+    box-shadow: 0px 10px 15px -10px var(--shadow-black);
+
+    background-color: var(--whiteish);
+}
+
+/* Projects Section */
+
+.project {
+    clear: both;
+    margin-bottom: 5rem;
+}
+
+.github-logo {
+    width: 2.5%;
+}

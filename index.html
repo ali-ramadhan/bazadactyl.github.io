@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="images/portrait.webp">
+    <meta name="theme-color" content="#FBF36D">
+
+    <title>baz ramadhan</title>
+
+    <link rel="icon" type="image/png" href="images/favicon.png"/>
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/viz.css">
+    <link rel="stylesheet" href="styles/experience-timeline.css">
+    <link rel="stylesheet" href="styles/skills-table.css">
+    <link rel="stylesheet" href="styles/world-map.css">
+
+    <script type="text/javascript" src="js/colors.js"></script>
+
+    <script type="text/javascript" src="lib/d3.v6.min.js"></script>
+    <script type="text/javascript" src="lib/d3-array.v2.min.js"></script>
+    <script type="text/javascript" src="lib/d3-geo.v2.min.js"></script>
+    <script type="text/javascript" src="lib/d3-geo-projection.v3.min.js"></script>
+    <script type="text/javascript" src="lib/topojson.v3.min.js"></script>
+    <script type="text/javascript" src="lib/topojson-client.v3.min.js"></script>
+</head> 
+
+<body>
+    <div class="header">
+        <h1 class="centered">baz ramadhan</h1>
+        <!-- <h2 class="centered">voted “most likely to die first in a zombie apocalypse” — camp winston 2018</h2> -->
+        <!-- TODO put different baz fun facts for each section -->
+    </div>
+
+    <div id="nav">
+        <div class="nav-button" id="nav-home">home</div>
+        <div class="nav-button" id="nav-experience">experience</div>
+        <div class="nav-button" id="nav-skills">skills</div>
+        <div class="nav-button" id="nav-projects">projects</div>
+        <!-- <div class="nav-button" id="nav-about">about me</div> --> <!-- Hide this section until its ready -->
+    </div>
+    
+    <hr>
+
+    <portfolio-section id="home">
+        <div id="baz-portrait">
+            <img loading="lazy" src="images/portrait.webp" alt="Portrait of Baz">
+        </div>
+
+        <p>
+            Hi! I'm Baz.
+        </p>
+
+        <p>
+            I'm a full-stack software developer who loves visualization, magical abstractions, and high-quality code.
+        </p>
+            
+        <p>
+            Across my work and co-op experiences and personal projects, I've honed my skills across the entire web development stack.
+            I have experience in back-end logic, web servers, databases, automated testing, visualization, front-end logic, and user interfaces.
+            I enjoy learning new things as well as using battle-tested technologies to solve users' problems and delight them.
+        </p>
+            
+        <p>
+            I'm interested in opportunities involving a subset of:
+        </p>
+        
+        <ul>
+            <li>back-end development</li>
+            <li>full-stack development</li>
+            <li>internal tooling</li>
+            <li>visualization</li>
+            <li>automated testing</li>
+            <li>mentoring</li>
+            <li>formal and informal leadership</li>
+            <!-- TODO Nate suggested making this list shorter by a few items -->
+        </ul>
+
+        <p>
+            Outside of work, I enjoy bouldering, climbing, camping, and most things outdoors.
+        </p>
+        
+        <p>
+            Let's chat if I sound like a good fit for your company — shoot me an email at
+            <a href="mailto:basim.ramadhan@gmail.com?subject=Let's chat over an interview">
+                basim.ramadhan@gmail.com
+            </a>
+        </p>
+
+        <img id="baz-signature" loading="lazy" src="images/signature-baz.webp" alt="Baz's Signature">
+    </portfolio-section>
+
+    <portfolio-section id="experience">
+        <h3>My Experience in a Timeline</h3>
+
+        <p class="centered">
+            Explore my past and current experiences by clicking on the timeline bars below:
+        </p>
+
+        <div id="experience-timeline" class="centered"></div>
+
+        <div id="experience-detail">
+            <div class="experience-text" id="nuba">
+                <h4>My First Job</h4>
+                <side-image class="logo">
+                    <img loading="lazy" src="images/nuba-logo.webp" alt="Logo for the Nuba restaurant">
+                </side-image>
+                <p>
+                    Ah, my first job ever.
+                    First of all, I'm glad you've read this far into my past.
+                    And in hindsight, I learned a lot about work and about myself serving up Lebanese food a few blocks from the Downtown Eastside.
+                </p>
+                <p>
+                    I enjoyed the <strong>challenge</strong> throughout the never-ending night shifts.
+                    I learned a lot about working with a team and working under pressure.
+                    On a busy night there's little room for error, so keeping <strong>tight</strong> communication with the kitchen was key.
+                </p>
+                <p>
+                    Despite the pressure, I had to make sure all orders looked <strong>immaculate</strong> and followed the diners' dietary requests.
+                    You could say this adds to my <strong>quality and testing</strong> experience -- except that I couldn't taste test a guest's hummus.
+                </p>
+            </div>
+
+            <div class="experience-text" id="computer-science">
+                <h4>Studying Computer Science</h4>
+                <side-image class="logo">
+                    <img loading="lazy" src="images/carleton-university-logo.webp" alt="Logo for Carleton University">
+                </side-image>
+                <h5>Summary</h5>
+                <ul>
+                    <li>Carleton University, Bachelor of <strong>Computer Science</strong>, B.C.S Honours</li>
+                    <li>Graduated in 2018 with Distinction & Co-operative Education</li>
+                    <li>Deans’ Honour List 2015, 2016, 2018</li>
+                    <li>Major GPA 3.9 / 4.0</li>
+                </ul>
+
+                <h5>More Details</h5>
+                <p>
+                    In April of 2018, I graduated with distinction with a Bachelor degree in Computer Science program.
+                    In the four years I spent there, I hit the Deans' honor list on three years.
+                    I'm grateful for the four semesters of co-op experience I gained during that time, which rounded out my education.
+                </p>
+                <p>
+                    Throughout my university career, I was committed to enrolling in the more interesting courses despite their difficulty.
+                    In hindsight, these are the courses that taught me the most:
+                </p>
+                <ul>
+                    <li>
+                        <flavor-text title="In this course I studied NP-completeness, approximation algorithms, complexity analysis, dynamic programming, and linear programming.">
+                            Design and Analysis of Algorithms II
+                        </flavor-text>
+                    </li>
+                    <li>
+                        <flavor-text title="In this course I studied online algorithms, graph analysis, and big data techniques. For example, we studied bloom filters, PageRank, and streaming algorithms.">
+                            Algorithms for Modern Datasets
+                        </flavor-text>
+                    </li>
+                    <li>
+                        <flavor-text title="In this course I developed feed-forward neural networks from scratch using back-propagation for simple number recognition. Later in the course we used TensorFlow to develop more elaborate neural networks for complex image recognition.">
+                            Intro to Machine Learning
+                        </flavor-text>
+                    </li>
+                    <li>
+                        <flavor-text title="In this course I studied classical AI techniques like alpha-beta pruning and genetic algorithms.">
+                            Artificial Intelligence
+                        </flavor-text>
+                    </li>
+                </ul>
+                <p>
+                    Then in my final year, I worked on my undergraduate honors project.
+                    For my honors project, I developed a code execution engine that securely executes foreign, user-submitted programs.
+                    The engine also verifies the programs' correctness and supports multiple languages.
+                    This engine now backs Project Lovelace.
+                    Head over to the projects section for more details.
+                </p>
+            </div>
+    
+            <div class="experience-text" id="el-camino">
+                <h4>Slinging Tacos on the Weekend</h4>
+                <side-image class="logo">
+                    <img loading="lazy" src="images/el-camino-logo.webp" alt="Logo for the El Camino restaurant">
+                </side-image>
+                <!-- TODO consider adding centred badges that are insightful and funny: "Taco2Table Delivery", "Teamwork", "Hard Work", "Free Baklava", "Free Pizza", "Machine Learning (course)" -->
+                <!-- TODO for software jobs its more straightforward: "Programming", "Automated Testing", "TypeScript", "Java", "Selenium", "Mentoring" -->
+                <!-- TODO think of how the interviewer reading this. Show him what he's looking for!!! -->
+                <p>
+                    Every Friday and Saturday night at El Camino was a busy night.
+                    I enjoyed it and my co-workers were fantastic people.
+                    I grew a lot and learned things you'd probably never learn in the software world.
+                </p>
+                <p>
+                    Have you ever tried delivering two dozen tacos on a shared plate to 10 drunk people crammed in a booth and explaining whom each taco belongs to?
+                    I can project my voice so well, and that's handy in a heated office Nerf gun battle.
+                </p>
+                <p>
+                    Building on my experience at Nuba, I got even better at <strong>multi-tasking</strong>.
+                    My role was the bridge between the kitchen and the front.
+                    As the only support staff on those busy nights, I had to <strong>coordinate</strong> with the servers, bartenders, cooks, and dishwasher to make sure the entire restaurant was running smoothly.
+                </p>
+                <p>
+                    Near the end of my time there, I was <strong>training</strong> new people.
+                    Working with guests also helped me gain invaluable customer service skills.
+                    I've learned to anticipate guests' needs before they even think to ask.
+                    In hindsight, these customers service skills have helped me greatly during my time in software desk jobs.
+                </p>
+            </div>
+
+            <div class="experience-text" id="private-tutor">
+                <h4>Tutoring on the Side</h4>
+                <side-image class="logo">
+                    <a href="images/top-comp-tutor-poster.webp" target="_blank">
+                        <img loading="lazy" src="images/top-comp-tutor-logo.webp" alt="Logo for Top Comp Tutor" title="Click to see the poster I used">
+                    </a>
+                </side-image>
+
+                <h5>Summary</h5>
+                <ul>
+                    <li>Independently <strong>tutored</strong> Computer Science students at Carleton University.</li>
+                    <li>Customized my teaching approach to provide an effective and <strong>personalized</strong> learning experience.</li>
+                    <li>Prepared session material in response to students' <strong>learning styles.</strong></li>
+                </ul>
+
+                <h5>More Details</h5>
+                <p>
+                    Once I realized I was doing well in school and in need of money, I decided to do take initiative and start tutoring.
+                    I <a href="images/top-comp-tutor-poster.webp" target="_blank">designed a poster</a> with Photoshop, made copies at the university print shop, and made good use of my staple gun.
+                    Having dozens of posters around campus brought a steady stream of clients.
+                </p>
+                <p>
+                    I customized my session prep and teaching style based on my client's needs.
+                    After all, tutoring a computer science student in discrete structures is different from helping an engineering student cram for his midterm. 
+                </p>
+                <p>
+                    Tutoring my clients kept me afloat until I became a teaching assistant.
+                    Well, the co-op income also helped a lot in paying my tuition and rent.
+                </p>
+            </div>
+
+            <div class="experience-text" id="ciena-wsm">
+                <h4>Early Beginnings</h4>
+                <side-image class="logo">
+                    <img loading="lazy" src="images/ciena-logo.webp" alt="Logo for Ciena">
+                </side-image>
+
+                <h5>Summary</h5>
+                <ul>
+                    <li><strong>Automated</strong> end-to-end tests that used to be executed manually, saving hours of time for the team.</li>
+                    <li>Investigated, fixed, and tested <strong>production bugs</strong> in network management software with Java and JUnit.</li>
+                    <li>Executed dozens of <strong>complex</strong> manual regression test cases and reported discovered bugs.</li>
+                </ul>
+
+                <h5>More Details</h5>
+                <p>
+                    I consider this co-op placement my career warm-up before moving on to bigger and greater things.
+                </p>
+                <p>
+                    For the first half of my term, I manually executed test cases for Ciena's legacy network management product.
+                    Nothing makes you appreciate automated testing more than that.
+                </p>
+                <p>
+                    In the second half, I fixed production bugs and wrote automated (thankfully!) tests.
+                    I also learned to file bug reports so detailed and beautiful they bring a tear to even the most hardened developer's eye.  
+                </p>
+            </div>
+
+            <div class="experience-text" id="teaching-assistant">
+                <h4>Learning & Earning</h4>
+                <side-image class="logo">
+                    <img loading="lazy" src="images/carleton-university-logo.webp" alt="Logo for Carleton University">
+                </side-image>
+
+                <h5>Summary</h5>
+                <ul>
+                    <li>Independently <strong>tutored</strong> Computer Science students at Carleton University.</li>
+                    <li>Customized my teaching approach to provide an effective and <strong>personalized</strong> learning experience.</li>
+                    <li>Prepared session material in response to students' <strong>learning styles</strong>.</li>
+                </ul>
+    
+                <h5>More Details</h5>
+                <p>
+                    I applied to be a teaching assistant (TA) for the rent money, but I stayed for the experience.
+                    The passion for teaching I acquired from being a private tutor continued to grow in my TA experiences.
+                </p>
+                <p>
+                    Overall, I ended up being a TA four times for the following courses:
+                </p>
+                <ul>
+                    <li>
+                        <flavor-text title="In this role I was available to students enrolled in four different courses from 1st and 2nd year.">
+                            Computer Science Teaching Assistant Center (1<sup>st</sup> and 2<sup>nd</sup> years courses)
+                        </flavor-text>
+                    </li>
+                    <li>Introduction to Software Engineering (2<sup>nd</sup> year course)</li>
+                    <li>Operating Systems (3<sup>rd</sup> year course)</li>
+                    <li>
+                        <flavor-text title="The notorious course many computer science students at Carleton dread!">
+                            Design & Analysis of Algorithms I (3<sup>rd</sup> year course)</li>
+                        </flavor-text>
+                </ul>
+                <p>
+                    I'm especially proud of that last one, because "the algorithms course" is notorious for being the most difficult mandatory computer science course at Carleton.
+                </p>
+            </div>
+
+            <div class="experience-text" id="interset">
+                <h4>Full-stack at a Startup</h4>
+
+                <side-image class="logo">
+                    <img loading="lazy" src="images/interset-logo.webp" alt="Logo for Interset">
+                </side-image>
+                <side-image class="screenshot">
+                    <a href="images/interset-chart-dashboard.webp" target="_blank">
+                        <img loading="lazy" src="images/interset-chart-dashboard.webp"
+                            alt="A screenshot nearly identical to the dashboard I built at Interset."
+                            title="Click to enlarge">
+                    </a>
+                    <br>
+                    <image-caption>
+                        Quality data warehouse dashboard
+                    </image-caption>
+                </side-image>
+                <side-image class="screenshot">
+                    <a href="images/interset-delta-bar-chart.webp" target="_blank">
+                        <img loading="lazy" src="images/interset-delta-bar-chart.webp"
+                            alt="A screenshot nearly identical to the delta bar chart I built at Interset."
+                            title="Click to enlarge">
+                    </a>
+                    <br>
+                    <image-caption>
+                        Delta bar chart
+                    </image-caption>
+                </side-image>
+                <side-image class="screenshot">
+                    <a href="images/interset-stacked-bar-chart.webp" target="_blank">
+                        <img loading="lazy" src="images/interset-stacked-bar-chart.webp"
+                            alt="A screenshot nearly identical to the stacked bar chart I built at Interset."
+                            title="Click to enlarge">
+                    </a>
+                    <br>
+                    <image-caption>
+                        Typical stacked bar chart
+                    </image-caption>
+                </side-image>
+                <side-image class="screenshot">
+                    <a href="images/interset-horizontal-stacked-bar-chart.webp" target="_blank">
+                        <img loading="lazy" src="images/interset-horizontal-stacked-bar-chart.webp"
+                            alt="A screenshot nearly identical to the horizontal bar chart I built at Interset."
+                            title="Click to enlarge">
+                    </a>
+                    <br>
+                    <image-caption>
+                        Horizontal stacked bar chart
+                    </image-caption>
+                </side-image>
+                <side-image class="screenshot">
+                    <a href="images/interset-line-chart.webp" target="_blank">
+                        <img loading="lazy" src="images/interset-line-chart.webp"
+                            alt="A screenshot nearly identical to the line chart I built at Interset."
+                            title="Click to enlarge">
+                    </a>
+                    <br>
+                    <image-caption>
+                        Multi-line chart
+                    </image-caption>
+                </side-image>
+
+                <h5>Summary</h5>
+                <ul>
+                    <li>
+                        Implemented a <strong>data warehouse</strong> solution with several <flavor-text title="Extract, Transform, Load">ETL</flavor-text> scripts for Jira data with Python and PostgreSQL.
+                        This solution was also designed to be extendable in the future to other data sources like SonarQube and test results.
+                    </li>
+                    <li>Developed a dashboard web interface for the data warehouse with 12 <strong><flavor-text title="The legends allowed you to add or remove data series. Also, the charts had slick animations when updated. Necessary? No. Sexy? Aboslutely.">interactive</flavor-text></strong> charts using D3.js.</li>
+                    <li>Created and optimized <strong>30+ SQL queries</strong> that <flavor-text title="As database triggers.">ran hourly</flavor-text> to aggregate new data from Jira.</li>
+                    <li>Designed and implemented a <strong>test automation framework</strong> for a <flavor-text title="This component was a forked and modified copy of Apache Flume, which is a service for processing large amounts of log data.">product component</flavor-text> using
+                        <flavor-text title="I suggested to my manager that we use Python because it would be easier to maintain. The decision came down to the testers who were going to use it after I leave being more comfortable with Bash and Powershell.">
+                            Bash and PowerShell.
+                        </flavor-text>
+                    </li>
+                </ul>
+    
+                <h5>My Favorite Co-op</h5>
+                <p>
+                    This was my, by far, my favorite placement because I was truly doing <strong>full-stack development</strong>.
+                    I was fiddling with the database, implementing test frameworks, and creating beautiful visualizations with D3.js.
+                    The fun started with my first project, which had me implement a data warehouse solution for the quality team.
+                </p>
+
+                <h5>The Data Warehouse</h5>
+                <p>
+                    I wrote ETL scripts in Python that captured hourly snapshots of the Jira instance to load into PostgreSQL.
+                    At the database level, I created and optimized dozens of SQL queries and triggers that aggregated new data.
+                    These aggregate views were in a format that could be visualized easily. 
+                </p>
+
+                <h5>Visualizing the Data in a Dashboard</h5>
+                <p>
+                    With the back-end done, I shifted to the front-end.
+                    The objective was to provide visual reports on defects, trends, and project status in one dashboard.
+                </p>
+                <p>
+                    To achieve that, I developed a web interface that consisted of 12 <flavor-text title="The legends allowed you to add or remove data series. Also, the charts had slick animations when updated. Necessary? No. Sexy? Aboslutely.">interactive</flavor-text> D3.js chart visualizations.
+                    The dashboard allowed users to filter the data in different ways, allowing management to easily discover product quality insights.
+                </p>
+
+                <h5>Developing a Test Framework</h5>
+                <p>
+                    After completing that project, I shifted gears to the team's fork of Apache Flume.
+                    The problem was that this component was being tested manually every release.
+                </p>
+                <p>
+                    To save QA time, I designed and implemented a test automation framework <strong>from scratch</strong>.
+                    Part of the challenge was having to simultaneously develop a Linux (using Bash) and Windows (using Powershell) version.
+                    Both of them had to behave exactly the same and be compatible with the same test files, of course.
+                </p>
+                <p>
+                    The new framework allowed the QA team to save hours of manual labor by automating their manual test cases.
+                </p>
+            </div>
+
+            <div class="experience-text" id="ciena-blue-planet">
+                <h4>Taking Initiative</h4>
+                <side-image class="logo">
+                    <img loading="lazy" src="images/ciena-blue-planet-logo.webp" alt="Logo for Ciena Blue Planet">
+                </side-image>
+                
+                <h5>Summary</h5>
+                <ul>
+                    <li>Implemented significant <strong>network management features</strong> and created automated unit and integration tests.</li>
+                    <li>Rewrote the team's test runner to parallelize test execution, <strong>reducing runtimes by 66%</strong> to 30 minutes.</li>
+                    <li>Solved major <strong>production</strong> bugs in my team's micro-service, allowing the team to meet a tight deadline.</li>
+                </ul>
+
+                <h5>New Challenges at Ciena</h5>
+                <p>
+                    I returned to Ciena in 2017 to work in a new division that was building the next-generation network management product.
+                    I experienced working as though I were a full-time developer, and had an excellent mentor teach me a lot of software development and team dynamics.
+                </p>
+                
+                <h5>Speeding up the Test Runner</h5>
+                <p>
+                    Early in my eight-month term, I noticed that the test framework took a <flavor-text title="About an hour and twenty minutes.">long time</flavor-text> to run.
+                    This framework was a tool custom-built in Python by the team to run different kinds of tests involving the team's micro-service.
+                    I realized that we could save loads of time by running most of the tests in parallel, but the team wasn't convinced it was possible.
+                </p>
+                <p>
+                    To counter their reservations, I built a proof-of-concept that proved it was indeed possible to parallelize the framework.
+                    With their blessing, I spent a couple of weeks on a full re-write of the framework.
+                    After merging my changes, the team enjoyed test runtimes that were faster by about an hour!
+                    Whereas a test run previously took an hour and twenty minutes, with my improvements that time was down to 30 minutes!
+                </p>
+
+                <h5>Production Feature Work</h5>
+                <p>
+                    Having proved myself with my work on the test framework, I started working alongside the team on feature work.
+                    I took on the responsibility of implementing core product features for the micro-service.
+                    Part of that was developing my suites of unit and integration tests, some of them developed in <flavor-text title="Test-driven development">TDD</flavor-text> style.
+                    I also helped the team meet tight deadlines by solving major production bugs.
+                    I concluded my term having successfully shipped a notable feature that was directly requested by customers.
+                </p>
+            </div>
+
+            <div class="experience-text" id="road-trip">
+                <h4>Exploring Our Canadian Backyard</h4>
+                <side-image class="screenshot">
+                    <a href="https://goo.gl/maps/iEnaGULzZVMbx8R76" target="_blank">
+                        <img loading="lazy" src="images/road-trip-route.webp" alt="Route of my east cost road trip" title="Click to view route in Google Maps">
+                    </a>
+                    <br>
+                    <image-caption>
+                        My road trip route — click to see it in Google Maps!
+                    </image-caption>
+                </side-image>
+                <p>
+                    After graduation, I decided to take a short sabbatical and unwind before jumping back into the software industry.
+                    I set off from Ottawa and headed north-east.
+                    I passed through all the eastern provinces, seeing friends, camping out, and crashing at dinky hostels.
+                </p>
+                <p>
+                    Once I made it to New Brunswick I met up with my brother who made his way up on his motorcycle.
+                    We visited Prince Edward Island together before heading down to Boston together.
+                    I ended my trip when I had to return back to Ottawa for my graduation ceremony in June.
+                </p>
+            </div>
+
+            <div class="experience-text" id="camp-winston">
+                <h4>An Unforgettable and Rewarding Summer</h4>
+                <side-image class="logo">
+                    <img loading="lazy" src="images/camp-winston-logo.webp" alt="Logo for Camp Winston">
+                </side-image>
+                <p>
+                    With summer in full swing, I made my way to Muskoka to work at a kid's camp.
+                </p>
+                <p>
+                    Camp Winston is an overnight summer camp for children with multiple neurological disorders like autism, obsessive-compulsive disorder, and intermittent explosive disorder.
+                    The time I spent here was incredibly rewarding and will stay with me as long as I live. 
+                </p>
+                <p>
+                    At the camp, I was a full-time counselor working with groups of 4-5 campers for two weeks at a time.
+                    During these two weeks, we would help the campers learn new skills like learning to ride a bike or tying their shoelaces.
+                    We would also work on building up their confidence, self-esteem, and social skills.
+                    We would also support the campers through difficult and emotional episodes, coaching them and helping them process difficult emotions.
+                </p>
+                <p>
+                    In addition to my regular duties and responsibilities, I was also a ropes instructor.
+                    I received high ropes training that allowed me to facilitate the roped adventure activities at the camp.
+                    Not only did this match my love for rock climbing, being a ropes instructor meant being one of the coolest counselors in the kids' eyes.
+                </p>
+            </div>
+    
+            <div class="experience-text" id="kinaxis">
+                <h4>Full time at Kinaxis</h4>
+                <side-image class="logo">
+                    <img loading="lazy" src="images/kinaxis-logo.webp" alt="Logo for Kinaxis">
+                </side-image>
+
+                <h5>Summary</h5>
+                <ul>
+                    <li>Led a brand new team through the release of its first feature, yielding a <strong>rapid promotion</strong> to Advisory.</li>
+                    <li>Acted as <strong>quality lead</strong> for several visualization projects and maintained a defect escape rate of 1-2%.</li>
+                    <li>Awarded a <strong><flavor-text title="I would have loved to link to the patent application, but it's not available online yet.">patent</flavor-text></strong> for co-inventing the innovative Timeline visualization for supply chain management.</li>
+                    <li>Created intuitive Selenium and TestCafé-based <strong>test frameworks</strong> with functional and integration tests.</li>
+                    <li><strong>Mentored</strong> junior team members on software development and testing practices.</li>
+                    <li>Set up <strong>CI/CD</strong> pipelines for the team's unit and integration tests through Jenkins.</li>
+                    <li>Directed the <strong>migration</strong> of 100+ tests from JUnit to TestCafé.</li>
+                </ul>
+
+                <h5>Highlighted Projects</h5>
+                <h6>Network Visualization</h6>
+                <side-image class="screenshot">
+                    <a href="images/visualization-network.webp" target="_blank">
+                        <img loading="lazy" src="images/visualization-network.webp"
+                            alt="A screenshot of the Network Visualization feature I worked on"
+                            title="Click to enlarge">
+                    </a>
+                    <br>
+                    <image-caption>
+                        Visualizing a bill of materials
+                    </image-caption>
+                </side-image>
+                <p>
+                    Soon after joining Kinaxis I took the opportunity to join an exciting new team.
+                    Our objective was to create innovative new ways to visualize supply chain data.
+                </p>
+                <p>
+                    For our first project, we designed and produced a generic graph-based visualization.
+                    As the only test developer, I was <strong>solely responsible</strong> for quality.
+                    The visualization had over a dozen <flavor-text title="Node color, node title, node subgroup, link color, link style, etc.">dimensions of configuration</flavor-text>.
+                    Being so configurable and flexible made the feature a challenge to test.
+                    Each sub-component could interact with other sub-components, so I have to be thorough in my testing.
+                </p>
+                <p>
+                    To that end, I set up a test framework and <strong>automated</strong> nightly builds along with a comprehensive suite of component and integration-level tests.
+                    In the process, I instilled a deep appreciation for testing across the team.
+                    We started <strong>catching defects earlier</strong> in the development cycle and completely preventing regressions.
+                    Using a dashboard in Jira, I created viz quality metrics that we could follow to gauge our quality level.
+                </p>
+                <p>
+                    We went from having no tests to merging unit and/or integrations tests in <strong>every pull request</strong>.
+                    By the end of the project, it turned out that I had caught a <flavor-text title="That is 73 true bugs, or 90 if you include bugs found by other employees during the internal beta program. I've excluded duplicates, clones, and invalids.">whopping 73 bugs</flavor-text>.
+                </p>
+                <p>
+                    Check out the
+                    <a href="https://www.kinaxis.com/en/news/press-releases/2019/kinaxis-reimagines-supply-chain-ecosystems-expanding-its-planning-platform" target="_blank">press report</a>
+                    from when we released this feature.
+                </p>
+
+                <h6>Timeline Visualization</h6>
+                <side-image class="screenshot">
+                    <a href="images/visualization-timeline.webp" target="_blank">
+                        <img loading="lazy" src="images/visualization-timeline.webp"
+                            alt="A screenshot of the Timeline Visualization feature I worked on"
+                            title="Click to enlarge">
+                    </a>
+                    <br>
+                    <image-caption>
+                        Visualizing supplies and demands on several products
+                    </image-caption>
+                </side-image>
+                <p>
+                    Later on I worked on the Timeline visualization project.
+                    It was for this feature that I was named one of the co-inventors on the <strong>patent</strong>.
+                    On the test side, I sought to continue upping the team's quality bar.
+                </p>
+                <p>
+                    Noticing that we need more user involvement, I championed and personally facilitated two internal <strong>beta programs</strong> to test our assumptions and sharpen our designs.
+                    I'm proud of how the beta program resulted in improving our understanding.
+                    We completely <strong>re-designed</strong> the feature thanks to the feedback we got in the beta.
+                    The re-design ended up vastly improving the power, <strong>usability</strong>, and long-term extensibility of the visualization.
+                </p>
+                <p>
+                    Outside the team, I <strong>evangelized</strong> my team's visualizations to internal audiences.
+                    I relied on different methods to achieve this.
+                    First, I relied on my internal network and spread awareness through word of mouth.
+                    Second, I presented keynote presentations to large R&D audiences.
+                </p>
+                <p>
+                    This effort not only brought more feedback to our work.
+                    It also allowed me to help others with their jobs.
+                    For development and support teams, this meant helping them visualize and better understand supply chain data.
+                    For customer-facing sales and consultant teams, this meant <flavor-text title="While I don't have hard numbers, I imagine this has helped us get some customers to sign on the dotted line.">spicing up their demos</flavor-text> by showing off the new visualization capabilities.
+                </p>
+
+                <h5>Growing the Team</h5>
+                <p>
+                    Throughout my time at Kinaxis, I was always keen on building the best team possible.
+                    A few months into joining the team, I saw the opportunity to fill the scrum master role.
+                    I took it on because I could see the team was functioning haphazardly and needed better processes.
+                    A few months later, our improved reporting, communication, and planning made us more predictable and allowed us to get much better feedback from stakeholders.
+                </p>
+                <p>
+                    As we grew the team I participated in interviewing and hiring junior members.
+                    I thoroughly enjoyed mentoring new members on both sides: developers and testers.
+                    I helped fill gaps in their software development knowledge, as well as testing principles and test framework design.
+                    In the past year, the team I helped build has been delivering on all projects <strong>on schedule</strong>.
+                    All without sacrificing quality.
+                </p>
+
+                <h5>CI/CD</h5>
+                <p>
+                    As I mentioned earlier, I set up the CI pipelines that our new team needed during the Network visualization project.
+                    I got our new tests running in nightly builds, assuring us we have no regressions.
+                </p>
+                <p>
+                    During the Timeline visualization project, I implemented <strong>running tests in CI</strong> on our pull requests.
+                    This further helped us keep a clean master and save time for developers.
+                    More recently, I integrated the team's repositories into SonarQube for <strong>static code analysis</strong> to prevent code smells and security vulnerabilities.
+                </p>
+
+                <h5>Working Remotely</h5>
+                <p>
+                    When the pandemic forced the team to go remote, I got creative to keep us going.
+                    Realizing that written documentation is even more important now, I ensured our team processes and onboarding were clear and well-documented.
+                    I also organized regular coffee time and online games (our team loves <flavor-text title="Party packs 2 and 7 were the biggest hits with my team. You should also check out the online Codenames games at https://codenames.game">Jackbox</flavor-text>!) to help the team have fun and stay connected.
+                    Today, we're still going strong despite spreading out to
+                    <flavor-text title="In 2019, we were entirely based in the Eastern time zone. In 2021, we're in the Eastern, Mountain, and Pacific time zones! At one point, that number was 4 because we had a co-op in Newfoundland!">
+                        3 different time zones!
+                    </flavor-text>
+                </p>
+            </div>
+
+            <div class="experience-group-text" id="software-experience">
+            </div>
+    
+            <div class="experience-group-text" id="teaching-experience">
+                <h5>Teaching Experience</h5>
+                <p>
+                    The opportunity to teach and mentor is something I cherish in my work.
+                    I love taking someone from "what?" to the "aha!" moment where the pieces fall nicely into place.
+                    That's why I'm keen on working at places that foster mentorship and learning.
+                </p>
+            </div>
+    
+            <div class="experience-group-text" id="people-experience">
+                <h5>Why do I include non-software experience?</h5>
+                <p>
+                    The longer I work in the software industry, the more I learn that communication, collaboration, and general people skills are key to good software development.
+                </p>
+                <p>
+                    To that end, I proudly list my non-software experience because I believe that <strong>soft skills are as necessary as technical skills</strong> when tackling big challenges as a team.
+                    I've discovered that these experiences have helped me immensely in collaborating as part of a team and in taking the lead and bringing others on board.
+                </p>
+            </div>
+        </div>
+    </portfolio-section>
+
+    <portfolio-section id="skills">
+        <h3>Skills</h3>
+        <p class="centered">
+            You can filter down my skills by clicking on these buttons:
+        </p>
+        <div id="skills-legend" class="legend"></div>
+        <div id="skills-table"></div>
+    </portfolio-section>
+
+    <portfolio-section id="projects">
+        <h3>Selected Projects</h3>
+
+        <div class="project" id="project-lovelace">
+            <h4>Teaching Science Students to Code <a href="https://github.com/project-lovelace" target="_blank"><img class="github-logo" loading="lazy" src="images/github-logo.webp" alt="Github Logo"></a></h4>
+
+            <side-image class="logo">
+                <a href="https://projectlovelace.net" target="_blank">
+                    <img loading="lazy" src="images/project-lovelace-logo.webp" alt="Logo for the Project Lovelace website">
+                </a>
+            </side-image>
+            <side-image class="video">
+                <video controls preload="metadata" poster="images/project-lovelace-demo-thumbnail.png">
+                    <source src="videos/project-lovelace-demo.webm" type="video/webm">
+                    It looks like your browser doesn't support embedded videos. This video demonstrates opening Project Lovelace and submitting code for one of the problems.
+                </video>
+                <br>
+                <image-caption>
+                    Solving the Plump Moose problem on the website
+                </image-caption>
+            </side-image>
+
+            <p>
+                <a href="https://projectlovelace.net" target="_blank">Project Lovelace</a> is an <strong>online learning platform</strong> for people who want to learn to code.
+                The platform is similar to others like Project Euler or Leetcode but geared towards science students.
+                Our key differentiator is providing intriguing problems from all branches of the natural, social, and mathematical sciences.
+            </p>
+            <p>
+                Our hope is that science students will be more interested in learning if the problems are more interesting than the <flavor-text title="Like validating parentheses, or implementing efficient sorting algorithms.">typical</flavor-text> computer science problems found on Leetcode!
+                And so far, we've had over <strong>10,000 code submissions</strong> from users all over the world!
+            </p>
+            <p>
+                This was a project I tackled with my brother, who has studied physics and computational climate modeling.
+                While he created the problems for the platform, I developed the website and backend.
+            </p>
+            <p>
+                First, I developed the <flavor-text title="A common term for a program test programs for correctness in programming contests against a set of known test cases.">online judge</flavor-text> using Python.
+                We wanted to allow users to submit programs in <strong>different languages</strong>, which required an extensible design.
+                Of course, the judge also had to be <strong>secure</strong>.
+                For that, I used Linux Containers (LXC).
+                LXC allowed me to easily sandbox user programs, preventing them from accessing the network, interacting with other files, or hogging <flavor-text title="CPU, RAM, and disk space.">system resources</flavor-text>.
+            </p>
+            <p>
+                With the online judge ready, I developed the website.
+                I learned to use the <strong>Django</strong> web framework along with a handy CSS framework called Bulma.
+                Also on the backend is our <strong>PostgreSQL database</strong>.
+                We use it to store information about the problems, user accounts, as well as user submissions.
+            </p>
+            <p>
+                <strong>Check it out at <a href="https://projectlovelace.net" target="_blank">projectlovelace.net</a>!</strong>
+            </p>
+        </div>
+
+        <div class="project" id="snoop-dogg-number">
+            <h4>Exploring Collaboration Graphs in the World of Music <a href="https://github.com/bazadactyl/snoop-dogg-number" target="_blank"><img class="github-logo" loading="lazy" src="images/github-logo.webp" alt="Github Logo"></a></h4>
+            <side-image>
+                <a href="images/musician-collaboration-graph.webp" target="_blank">
+                    <img loading="lazy" src="images/musician-collaboration-graph-thumbnail.webp"
+                        alt="Graph of musicians and the collaborations they've done"
+                        title="Click to view in high resolution">
+                </a>
+                <image-caption>
+                    A collaboration graph of the entire music world; click to view in high resolution
+                </image-caption>
+            </side-image>
+            <side-image class="screenshot">
+                <a href="images/snoop-dogg-community.webp" target="_blank">
+                    <img loading="lazy" src="images/snoop-dogg-community.webp"
+                        alt="An image of one of the communities in the music collaboration graph. This is the community that Snoop Dogg is in."
+                        title="Click to view in high resolution">
+                </a>
+                <image-caption>
+                    One of the largest communities in the music world; click to view in high resolution
+                </image-caption>
+            </side-image>
+            <p>
+                It all started with a question. Who is the <flavor-text title="">Paul Erdős</flavor-text> of the music world? Erdős is known for being the most prolific collaborator in mathematics. Meaning he has more paper collaborations than any other mathematician, dead or alive.
+            </p>
+            <p>
+                I hypothesized was that <strong>Snoop Dogg</strong> would be the answer. He seems to collaborate with everyone! Including a <a href="https://www.youtube.com/watch?v=-Urjas5Nt0I">collaboration</a> with Egyptian superstar <a href="https://en.wikipedia.org/wiki/Tamer_Hosny" target="_blank">Tamer Hosny</a>. To answer this question, I needed data. Lots of data.
+            </p>
+            <p>
+                Luckily, the massive and freely available MusicBrainz database is just what I needed.
+                I started with some data processing inside the <strong>PostgreSQL</strong> database.
+                Using SQL, I quickly aggregated all <flavor-text title="The edges of the graph. The number of unique collaborations acted as the edge weight.">collaborations</flavor-text> between <flavor-text title="The vertices of the graph.">artists</flavor-text>.
+                Then, I exported the data I needed to begin <strong>graph analysis</strong>.
+            </p>
+            <p>
+                I used Python's <a href="https://networkx.org/" target="_blank">NetworkX library</a> to find the shortest paths between every pair of artists.
+                This helped me answer the question: who's the Paul Erdős of the music world?
+                Shockingly, my hypothesis was correct! It is indeed Snoop Dogg by a <flavor-text title="Snoop's got 803 unique collaborations! He's far ahead of Busta Rhymes in 2nd place and with 549 collaborations, and Lil Wayne in 3rd place with 548.">wide margin</flavor-text>!
+            </p>
+            <p>
+                For fun, I continued my analysis further with a graph analysis and <strong>visualization</strong> tool called <a href="https://gephi.org/" target="_blank">Gephi</a>.
+                I found that there were community-finding algorithms that could identify communities within the collaboration graph.
+                I was able to produce some beautiful visuals and learn a lot about graphs in the process.
+            </p>
+            <p>
+                Check out the <a href="https://github.com/bazadactyl/snoop-dogg-number/blob/master/presentation/presentation.pdf">slide deck</a> I produced for more details and visuals.
+            </p>
+        </div>
+
+        <div class="project" id="neural-networks">
+            <h4>Image Recognition with Convolutional Neural Networks <a href="https://github.com/bazadactyl/neural-networks" target="_blank"><img class="github-logo" loading="lazy" src="images/github-logo.webp" alt="Github Logo"></a></h4>
+            <side-image class="screenshot">
+                <img loading="lazy" src="images/imagenet-samples.webp" alt="Sample images from the ImageNet dataset">
+                <br>
+                <image-caption>
+                    Sample images from the ImageNet dataset
+                </image-caption>
+            </side-image>
+            <p>
+                For the final project of my neural networks course, I teamed up with a friend to build a <strong>classifier</strong> for the famous <strong>ImageNet</strong> dataset.
+                We investigated and compared the performance of state-of-the-art <strong>convolutional neural networks</strong> (CNNs) for image recognition.
+            </p>
+            <p>
+                We decided to use <strong>TensorFlow</strong> to classify the Tiny ImageNet dataset, a simpler version of the regular ImageNet dataset.
+                We referred to network structures and techniques used by <a href="https://arxiv.org/abs/1506.02640" target="_blank">YOLO</a> and <a href="https://en.wikipedia.org/wiki/AlexNet" target="_blank">AlexNet</a> and derived simplified versions that we could run on a single GTX 970 GPU card.
+            </p>
+            <p>
+                Our project involved lots of tuning and experimenting and failing and plenty of troubleshooting.
+                Considering our lack of beefy hardware, we were happy to achieve a <strong>top-1 accuracy of 30%</strong> in the end.
+            </p>
+        </div>
+        
+        <div class="project" id="tweet-maps">
+            <h4>Geo-visualizing City Activity Using Live Tweets <a href="https://github.com/bazadactyl/migrate-app" target="_blank"><img class="github-logo" loading="lazy" src="images/github-logo.webp" alt="Github Logo"></a></h4>
+            <side-image class="screenshot">
+                <img loading="lazy" src="images/migrate-screenshot.webp" alt="Screenshot of the Migrate App" style="max-width: 256px;">
+                <br>
+                <image-caption>
+                    A screenshot of the Migrate app on Android
+                </image-caption>
+            </side-image>
+            <p>
+                For my third-year software engineering course, my group and I developed an <strong>Android</strong> app.
+                The application allows you to spontaneously discover events occurring nearby.
+                By overlaying tweets on <strong>Google Maps</strong>, we show users where there is lots of activity in their city.
+            </p>
+            <p>
+                While we did well in the course, this project was an <strong>interesting lesson</strong> for me.
+                While planning, we assumed that there was enough data for the app to be useful.
+                Near the end of the project, we found out that only a tiny minority of tweets are geotagged.
+                And in that subset of tweets, many of them were businesses advertising their services, not individuals broadcasting impromptu happenings around town.
+                That really taught me the importance of prototyping and <strong>challenging assumptions</strong> early in the software development life cycle.
+            </p>
+            <p>
+               On the positive side, we created a <a href="https://www.youtube.com/watch?v=S3FNLULdlfI" target="_blank">goofy video</a> to present the app to the class!
+            </p>
+        </div>
+
+        <div class="project" id="genetic-playlists">
+            <h4>Creating Playlists Using Genetic Algorithms</h4>
+            <side-image class="screenshot">
+                <img loading="lazy" src="images/soundcloud-playlist.webp" alt="A SoundCloud drum n' bass playlist">
+                <image-caption>
+                    A drum n' bass playlist on SoundCloud
+                </image-caption>
+            </side-image>
+            <p>
+                This project was my final assignment for my <strong>artificial intelligence</strong> course at Carleton.
+                As a big fan of a good drum n' bass mix, I wanted a program to create aesthetically pleasing playlists from a collection of songs.
+            </p>
+            <p>
+                I used a <strong>genetic algorithm</strong> implemented in Python for this project.
+                The algorithm uses mutation and cross-selection in concert with a loss function to quickly generate a flowing playlist.
+            </p>
+        </div>
+    </portfolio-section>
+
+    <portfolio-section id="about">
+        <h3>About Me</h3>
+
+        <h4>Photo Gallery</h4>
+
+        <p>Climbing pics</p>
+        <p>Travel pics</p>
+        <p>Other stuff in my photos?</p>
+        <p>how important is this section? should I put it in or not?</p>
+
+        <h4>My World Map</h4>
+
+        <div id="world-map" class="centered"></div>
+
+        <h4>My Life in a Line Chart</h4>
+        <!-- TODO paint points -->
+        <!-- TODO make points bigger on hover -->
+        <div id="life-chart">
+            <link rel="stylesheet" href="styles/life-chart.css">
+        </div>
+    </portfolio-section>
+
+</body>
+
+<!-- These scripts must run after the document is fully rendered because it relies on certain elements to be present. -->
+<script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript" src="js/experience-timeline.js"></script>
+<script type="text/javascript" src="js/skills-table.js"></script>
+<script type="text/javascript" src="js/world-map.js"></script>
+<script type="text/javascript" src="js/life-chart.js"></script>
+
+</html>

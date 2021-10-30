@@ -1,0 +1,44 @@
+/* Styles for all visualizations */
+
+.legend {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.legend-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.legend-text {
+    font-size: 1.0rem;
+    font-family: freight-sans-pro, Helvetica, sans-serif;
+    font-weight: 700;
+    color: var(--off-white);
+    line-height: 0.8rem;
+    
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    vertical-align: baseline;
+    white-space: nowrap;
+}

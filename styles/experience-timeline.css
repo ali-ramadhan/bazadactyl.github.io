@@ -1,0 +1,47 @@
+.bar {
+    stroke-width: 0px;
+    stroke: none;
+}
+
+.bar.selected {
+    stroke-width: 1.5px;
+    stroke: var(--soft-black);
+}
+
+.bar-label {
+    font-size: 1.0rem;
+    font-family: freight-sans-pro, sans-serif;
+    fill: var(--soft-black);
+}
+
+.tick {
+    font-size: 18px;
+    font-family: freight-sans-pro, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.tooltip {
+    opacity: 0;
+    display: none;
+    position: absolute;
+    z-index: 100;
+    line-height: 1.30;
+    box-shadow: 0px 0px 10px var(--shadow-black);
+    font-size: .875rem;
+    word-wrap: break-word;
+    background-color: var(--whiteish);
+    border: solid;
+    border-width: 2px;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.tooltip.selected {
+    display: block;
+    opacity: 0.9;
+}
+
+.tooltip > div {
+    font-size: 1.0rem;
+    font-family: freight-sans-pro, sans-serif;
+}

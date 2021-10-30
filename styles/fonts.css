@@ -1,0 +1,120 @@
+@font-face {
+    font-family: freight-display-pro;
+    font-weight: 300;
+    font-style: normal;
+    font-display: auto;
+    src:
+        url("../fonts/freight-display-pro-300.woff2") format("woff2"),
+        url("../fonts/freight-display-pro-300.woff") format("woff"),
+        url("../fonts/freight-display-pro-300.otf") format("opentype");
+}
+
+@font-face {
+    font-family: freight-display-pro;
+    font-weight: 700;
+    font-style: normal;
+    font-display: auto;
+    src:
+        url("../fonts/freight-display-pro-700.woff2") format("woff2"),
+        url("../fonts/freight-display-pro-700.woff") format("woff"),
+        url("../fonts/freight-display-pro-700.otf") format("opentype");
+}
+
+@font-face {
+    font-family: freight-display-pro;
+    font-weight: 700;
+    font-style: italic;
+    font-display: auto;
+    src:
+        url("../fonts/freight-display-pro-700-italic.woff2") format("woff2"),
+        url("../fonts/freight-display-pro-700-italic.woff") format("woff"),
+        url("../fonts/freight-display-pro-700-italic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: freight-sans-pro;
+    font-weight: 300;
+    font-style: normal;
+    font-display: auto;
+    src:
+        url("../fonts/freight-sans-pro-300.woff2") format("woff2"),
+        url("../fonts/freight-sans-pro-300.woff") format("woff"),
+        url("../fonts/freight-sans-pro-300.otf") format("opentype");
+}
+
+@font-face {
+    font-family: freight-sans-pro;
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+    src:
+        url("../fonts/freight-sans-pro-400.woff2") format("woff2"),
+        url("../fonts/freight-sans-pro-400.woff") format("woff"),
+        url("../fonts/freight-sans-pro-400.otf") format("opentype");
+}
+
+@font-face {
+    font-family: freight-sans-pro;
+    font-weight: 400;
+    font-style: italic;
+    font-display: auto;
+    src:
+        url("../fonts/freight-sans-pro-400-italic.woff2") format("woff2"),
+        url("../fonts/freight-sans-pro-400-italic.woff") format("woff"),
+        url("../fonts/freight-sans-pro-400-italic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: freight-sans-pro;
+    font-weight: 600;
+    font-style: normal;
+    font-display: auto;
+    src:
+        url("../fonts/freight-sans-pro-600.woff2") format("woff2"),
+        url("../fonts/freight-sans-pro-600.woff") format("woff"),
+        url("../fonts/freight-sans-pro-600.otf") format("opentype");
+}
+
+@font-face {
+    font-family: freight-sans-pro;
+    font-weight: 600;
+    font-style: italic;
+    font-display: auto;
+    src:
+        url("../fonts/freight-sans-pro-600-italic.woff2") format("woff2"),
+        url("../fonts/freight-sans-pro-600-italic.woff") format("woff"),
+        url("../fonts/freight-sans-pro-600-italic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: freight-text-pro;
+    font-weight: 300;
+    font-style: normal;
+    font-display: auto;
+    src:
+        url("../fonts/freight-text-pro-300.woff2") format("woff2"),
+        url("../fonts/freight-text-pro-300.woff") format("woff"),
+        url("../fonts/freight-text-pro-300.otf") format("opentype");
+}
+
+@font-face {
+    font-family: freight-text-pro;
+    font-weight: 400;
+    font-style: italic;
+    font-display: auto;
+    src:
+        url("../fonts/freight-text-pro-400-italic.woff2") format("woff2"),
+        url("../fonts/freight-text-pro-400-italic.woff") format("woff"),
+        url("../fonts/freight-text-pro-400-italic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: freight-text-pro;
+    font-weight: 700;
+    font-style: normal;
+    font-display: auto;
+    src:
+        url("../fonts/freight-text-pro-700.woff2") format("woff2"),
+        url("../fonts/freight-text-pro-700.woff") format("woff"),
+        url("../fonts/freight-text-pro-700.otf") format("opentype");
+}

@@ -1,0 +1,140 @@
+#skills-table {
+    margin-bottom: 1rem;
+}
+
+#skills-table > table {
+    border-collapse: separate;
+    border-spacing: 0px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    box-shadow: 0px 15px 15px -10px var(--shadow-black);
+}
+
+.skill-row td {
+    border-width: 0px;
+    border-color: var(--soft-black);
+    border-style: solid;
+
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+
+.skill-row:first-of-type td { 
+    padding-top: 0.6rem; /* extra padding on first row */
+}
+
+.skill-row:last-of-type td {
+    padding-bottom: 0.6rem; /* extra padding on last row */
+}
+
+.skill-row td > * {
+    vertical-align: middle;
+}
+
+/* Borders on corners */
+
+.skill-row:first-of-type td:first-of-type {
+    border-top-left-radius: 10px;
+}
+
+.skill-row:first-of-type td:last-of-type {
+    border-top-right-radius: 10px;
+}
+
+.skill-row:last-of-type td:first-of-type {
+    border-bottom-left-radius: 10px;
+}
+
+.skill-row:last-of-type td:last-of-type {
+    border-bottom-right-radius: 10px;
+}
+
+/* Borders on other outer cells */
+
+.skill-row:first-of-type td {
+    border-top-width: 3px;
+}
+
+.skill-row td:first-of-type {
+    border-left-width: 3px;
+}
+
+.skill-row td:last-of-type {
+    border-right-width: 3px;
+}
+
+.skill-row:last-of-type td {
+    border-bottom-width: 3px;
+}
+
+/* Styling on cells */
+
+.skill-row:nth-child(odd) {
+    background: #fffde7;
+}
+
+.skill-row:nth-child(even) {
+    background: #fffde7; /* TODO use different color here*/
+}
+
+.skill-logo-cell {
+    text-align: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.skill-logo-cell img {
+    max-height: 2rem;
+}
+
+.skill-name-cell {
+    text-align: left;
+    padding: 0;
+}
+
+.progress-bar-cell {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.progress-bar-background, .progress-bar-foreground {
+    height: 10px;
+    border-radius: 5px;
+}
+
+.progress-bar-background {
+    background: var(--grey);
+    width: 300px;
+}
+
+.progress-bar-foreground {
+    background: var(--soft-black);
+}
+
+/* Legend */
+
+#skills-legend {
+    margin-bottom: 1rem;
+}
+
+#skills-legend .legend-item:not(.selected) .legend-text {
+    background-color: unset !important;
+    color: var(--soft-black) !important;
+}
+
+/* Mobile styling */
+@media (max-width: 600px) {
+    .skill-logo-cell img {
+        max-height: 1.5rem;
+    }
+
+    .skill-name-cell {
+        font-size: 1.1rem;
+    }
+
+    .progress-bar-background {
+        width: 30vw;
+    }
+}
