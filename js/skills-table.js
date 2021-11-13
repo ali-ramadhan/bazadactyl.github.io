@@ -272,6 +272,14 @@ const BazSkillsData = [
         enjoyment: 7,
         type: SkillType.Tools,
         alternateType: null,
+    },
+    {
+        id: "powershell",
+        name: "Powershell",
+        proficiency: 4,
+        enjoyment: 7,
+        type: SkillType.Tools,
+        alternateType: null,
     }
 ];
 

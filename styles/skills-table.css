@@ -1,5 +1,5 @@
 #skills-table {
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
 }
 
 #skills-table > table {
@@ -76,7 +76,7 @@
 }
 
 .skill-row:nth-child(even) {
-    background: #fffde7; /* TODO use different color here*/
+    background: #fffde7;
 }
 
 .skill-logo-cell {
@@ -116,7 +116,7 @@
 /* Legend */
 
 #skills-legend {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 #skills-legend .legend-item:not(.selected) .legend-text {

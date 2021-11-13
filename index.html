@@ -17,23 +17,16 @@
     <link rel="stylesheet" href="styles/viz.css">
     <link rel="stylesheet" href="styles/experience-timeline.css">
     <link rel="stylesheet" href="styles/skills-table.css">
-    <link rel="stylesheet" href="styles/world-map.css">
 
     <script type="text/javascript" src="js/colors.js"></script>
 
     <script type="text/javascript" src="lib/d3.v6.min.js"></script>
     <script type="text/javascript" src="lib/d3-array.v2.min.js"></script>
-    <script type="text/javascript" src="lib/d3-geo.v2.min.js"></script>
-    <script type="text/javascript" src="lib/d3-geo-projection.v3.min.js"></script>
-    <script type="text/javascript" src="lib/topojson.v3.min.js"></script>
-    <script type="text/javascript" src="lib/topojson-client.v3.min.js"></script>
 </head> 
 
 <body>
     <div class="header">
         <h1 class="centered">baz ramadhan</h1>
-        <!-- <h2 class="centered">voted “most likely to die first in a zombie apocalypse” — camp winston 2018</h2> -->
-        <!-- TODO put different baz fun facts for each section -->
     </div>
 
     <div id="nav">
@@ -41,7 +34,6 @@
         <div class="nav-button" id="nav-experience">experience</div>
         <div class="nav-button" id="nav-skills">skills</div>
         <div class="nav-button" id="nav-projects">projects</div>
-        <!-- <div class="nav-button" id="nav-about">about me</div> --> <!-- Hide this section until its ready -->
     </div>
     
     <hr>
@@ -56,28 +48,25 @@
         </p>
 
         <p>
-            I'm a full-stack software developer who loves visualization, magical abstractions, and high-quality code.
+            I'm a software developer who loves visualization, magical abstractions, and high-quality code.
         </p>
             
         <p>
-            Across my work and co-op experiences and personal projects, I've honed my skills across the entire web development stack.
-            I have experience in back-end logic, web servers, databases, automated testing, visualization, front-end logic, and user interfaces.
-            I enjoy learning new things as well as using battle-tested technologies to solve users' problems and delight them.
+            I've honed my skills across the entire web development stack though my work experience, co-op placements, and personal projects.
+            I have experience working with back and front-end logic, web servers, databases, automated testing, and visualization.
+            Domain-wise, I've worked in <flavor-text title="At Kinaxis.">supply chain management</flavor-text> and <flavor-text title="At Ciena.">network management</flavor-text>.
+            I enjoy learning new things as well as using battle-tested technologies to delight users and solve their problems.
         </p>
             
         <p>
-            I'm interested in opportunities involving a subset of:
+            I'm interested in opportunities focused on:
         </p>
         
         <ul>
             <li>back-end development</li>
             <li>full-stack development</li>
             <li>internal tooling</li>
-            <li>visualization</li>
             <li>automated testing</li>
-            <li>mentoring</li>
-            <li>formal and informal leadership</li>
-            <!-- TODO Nate suggested making this list shorter by a few items -->
         </ul>
 
         <p>
@@ -184,9 +173,6 @@
                 <side-image class="logo">
                     <img loading="lazy" src="images/el-camino-logo.webp" alt="Logo for the El Camino restaurant">
                 </side-image>
-                <!-- TODO consider adding centred badges that are insightful and funny: "Taco2Table Delivery", "Teamwork", "Hard Work", "Free Baklava", "Free Pizza", "Machine Learning (course)" -->
-                <!-- TODO for software jobs its more straightforward: "Programming", "Automated Testing", "TypeScript", "Java", "Selenium", "Mentoring" -->
-                <!-- TODO think of how the interviewer reading this. Show him what he's looking for!!! -->
                 <p>
                     Every Friday and Saturday night at El Camino was a busy night.
                     I enjoyed it and my co-workers were fantastic people.
@@ -289,17 +275,10 @@
                     Overall, I ended up being a TA four times for the following courses:
                 </p>
                 <ul>
-                    <li>
-                        <flavor-text title="In this role I was available to students enrolled in four different courses from 1st and 2nd year.">
-                            Computer Science Teaching Assistant Center (1<sup>st</sup> and 2<sup>nd</sup> years courses)
-                        </flavor-text>
-                    </li>
+                    <li><flavor-text title="In this role I was available to students enrolled in four different courses from 1st and 2nd year.">Computer Science Teaching Assistant Center</flavor-text> (1<sup>st</sup> and 2<sup>nd</sup> years courses)</li>
                     <li>Introduction to Software Engineering (2<sup>nd</sup> year course)</li>
                     <li>Operating Systems (3<sup>rd</sup> year course)</li>
-                    <li>
-                        <flavor-text title="The notorious course many computer science students at Carleton dread!">
-                            Design & Analysis of Algorithms I (3<sup>rd</sup> year course)</li>
-                        </flavor-text>
+                    <li><flavor-text title="The notorious course many computer science students at Carleton dread!">Design & Analysis of Algorithms I</flavor-text> (3<sup>rd</sup> year course)</li>
                 </ul>
                 <p>
                     I'm especially proud of that last one, because "the algorithms course" is notorious for being the most difficult mandatory computer science course at Carleton.
@@ -671,6 +650,9 @@
     <portfolio-section id="skills">
         <h3>Skills</h3>
         <p class="centered">
+            I've rated my skills relative to my strongest skill (Python).
+        </p>
+        <p class="centered">
             You can filter down my skills by clicking on these buttons:
         </p>
         <div id="skills-legend" class="legend"></div>
@@ -846,36 +828,11 @@
             </p>
         </div>
     </portfolio-section>
-
-    <portfolio-section id="about">
-        <h3>About Me</h3>
-
-        <h4>Photo Gallery</h4>
-
-        <p>Climbing pics</p>
-        <p>Travel pics</p>
-        <p>Other stuff in my photos?</p>
-        <p>how important is this section? should I put it in or not?</p>
-
-        <h4>My World Map</h4>
-
-        <div id="world-map" class="centered"></div>
-
-        <h4>My Life in a Line Chart</h4>
-        <!-- TODO paint points -->
-        <!-- TODO make points bigger on hover -->
-        <div id="life-chart">
-            <link rel="stylesheet" href="styles/life-chart.css">
-        </div>
-    </portfolio-section>
-
 </body>
 
-<!-- These scripts must run after the document is fully rendered because it relies on certain elements to be present. -->
+<!-- These scripts must run after the document is fully rendered because they rely on certain elements to be present. -->
 <script type="text/javascript" src="js/nav.js"></script>
 <script type="text/javascript" src="js/experience-timeline.js"></script>
 <script type="text/javascript" src="js/skills-table.js"></script>
-<script type="text/javascript" src="js/world-map.js"></script>
-<script type="text/javascript" src="js/life-chart.js"></script>
 
 </html>
