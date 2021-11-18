@@ -28,7 +28,7 @@ const BazSkillsData = [
     {
         id: "sql",
         name: "SQL",
-        proficiency: 6,
+        proficiency: 7,
         enjoyment: 9,
         type: SkillType.Databases,
         alternateType: null,
@@ -279,6 +279,30 @@ const BazSkillsData = [
         proficiency: 3,
         enjoyment: 8,
         type: SkillType.WebDev,
+        alternateType: null,
+    },
+    {
+        id: "sqlite",
+        name: "SQLite",
+        proficiency: 5,
+        enjoyment: 9,
+        type: SkillType.Databases,
+        alternateType: null,
+    },
+    {
+        id: "flask",
+        name: "Flask",
+        proficiency: 3,
+        enjoyment: 8,
+        type: SkillType.WebDev,
+        alternateType: null,
+    },
+    {
+        id: "lxc",
+        name: "Linux Containers (LXC)",
+        proficiency: 5,
+        enjoyment: 7,
+        type: SkillType.Tools,
         alternateType: null,
     }
 ];
