@@ -60,7 +60,7 @@ const BazSkillsData = [
     {
         id: "aws",
         name: "AWS",
-        proficiency: 2,
+        proficiency: 3,
         enjoyment: 3,
         type: SkillType.WebDev,
         alternateType: null,
@@ -169,14 +169,6 @@ const BazSkillsData = [
         type: SkillType.Testing,
         alternateType: null,
     },
-    // {
-    //     id: "jira",
-    //     name: "Jira Jockeying",
-    //     proficiency: 8,
-    //     enjoyment: 5,
-    //     type: SkillType.Tools,
-    //     alternateType: null,
-    // },
     {
         id: "mongodb",
         name: "MongoDB",
@@ -279,6 +271,14 @@ const BazSkillsData = [
         proficiency: 4,
         enjoyment: 7,
         type: SkillType.Tools,
+        alternateType: null,
+    },
+    {
+        id: "react",
+        name: "React",
+        proficiency: 3,
+        enjoyment: 8,
+        type: SkillType.WebDev,
         alternateType: null,
     }
 ];
