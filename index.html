@@ -22,6 +22,7 @@
 
     <script type="text/javascript" src="lib/d3.v6.min.js"></script>
     <script type="text/javascript" src="lib/d3-array.v2.min.js"></script>
+    <script type="module" src="app.js"></script>
 </head> 
 
 <body>
@@ -40,7 +41,9 @@
 
     <portfolio-section id="home">
         <div id="baz-portrait">
-            <img loading="lazy" src="images/portrait.webp" alt="Portrait of Baz">
+            <video id="video" loop crossorigin="anonymous" playsinline style="display:none">
+                <source src="https://raw.githubusercontent.com/ali-ramadhan/artifact-sandbox/main/precip.webm">
+            </video>
         </div>
         <p>
             Hi! I'm Baz.
